@@ -8,6 +8,7 @@ import Lenis from '@studio-freight/lenis'
 
 const App = () => {
   const [isMediumScreen, setMediumScreen] = useState(window.innerWidth<=1024)
+  const [isSmallScreen, setSmallScreen] = useState(window.innerWidth<=600)
   const [isToggleMenu, setToggleMenu] = useState (false)
   const lenis = new Lenis()
 
@@ -21,13 +22,14 @@ requestAnimationFrame(raf)
 
     const handleResize = () => {
       setMediumScreen(window.innerWidth <= 1024);
+      setSmallScreen(window.innerWidth <= 600);
       setToggleMenu(false);
     };
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [isMediumScreen]);
+  }, [isMediumScreen,isSmallScreen]);
 
 
   return (
@@ -35,6 +37,7 @@ requestAnimationFrame(raf)
  <Navigation
  isMediumScreen={isMediumScreen}
  setToggleMenu={setToggleMenu}
+ isSmallScreen={isSmallScreen}
   isToggleMenu={isToggleMenu}/>
 
     <div className={styles.header}> 

@@ -4,7 +4,7 @@ import { gsap } from 'gsap'
 import Navlinks from './navlinks'
 import Socials from '../../assets/icons/soclals';
 
-const Navigation = ({isToggleMenu, setToggleMenu, isMeddiumScreen}) => {
+const Navigation = ({isToggleMenu, setToggleMenu, isMediumScreen, isSmallScreen}) => {
   const container = useRef(null);
   const content = useRef(null);
 
@@ -37,8 +37,8 @@ useEffect(() => {
                                         justifyContent: 'center',
                                         alignItems: 'center', 
                                         gap: '20px'}}
-        linkProps={{color: 'whitesmoke',
-                            fontSize: '32px',
+        linkProps={{color: 'lightgray',
+                            fontSize: isSmallScreen ? '32px' : '45px',
                             textTransform: 'capitalize'}}/>
         </div>
       <div className={styles.socialContainer}>
@@ -47,12 +47,13 @@ useEffect(() => {
       displayNames={true}
       containerProps={{width: '100%',
                                       gap: '10px',
-                                        height: 'fit-content'}}
-      linkProps={{fontSize: '3vw', 
-                          fontFamily: 'monospace',
+                                       flexWrap: 'wrap',
+                                      height: 'fit-content'}}
+      linkProps={{fontSize:  isSmallScreen ? '18px': '32px', 
+                          fontFamily: 'Teko, monospace',
                             width: 'fit-content',
                             height: 'fit-content',
-                            fontWeight: '400',
+                            fontWeight: '300',
                             textTransform: 'uppercase',
                             color: 'lightgray' }} />
       </div>
