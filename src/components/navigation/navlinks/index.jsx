@@ -11,7 +11,7 @@ const Navlinks = ({linkProps, containerProps}) => {
         key={index} 
         to={link.to}
         className={styles.link}
-        style={...linkProps}>
+        style={{...linkProps}}>
              {link.text}
     </NavLink>
     ))}
