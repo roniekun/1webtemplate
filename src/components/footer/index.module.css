@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 1em;
+    justify-content: center;
+
+    .cta{
+        width: 100%;
+        align-self: flex-start;
+        line-height: 1.5em;
+
+        & h1{
+            font-size:12px;
+        }
+    }
+    .date{
+        font-size: 12px;
+    }
+}

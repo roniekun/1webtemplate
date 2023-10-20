@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    padding: 5%;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    transform: translateX(-100%);
+    background-color: #181818;
+    z-index: 9;
+    overflow: hidden;
+
+    .content{
+        width: 100%;
+    }
+}

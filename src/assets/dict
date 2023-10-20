@@ -1,0 +1,49 @@
+
+text\line\clamp
+
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 7;
+overflow: hidden;
+
+/* fonts */
+font-family: 'Chivo', sans-serif;
+font-family: 'Handjet', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Martian Mono', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Questrial', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Spectral', serif;
+font-family: 'Teko', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'VT323', monospace;
+font-family: 'Work Sans', sans-serif;
+
+
+
+
+
+/* selecting items and mapping them in an array  */
+
+const slideElements = document.querySelectorAll(`.${styles.slides}`);
+// Convert NodeList to an array (optional)
+const slideArray = Array.from(slideElements);
+
+// Now you can work with slideElements or slideArray
+slideArray.forEach((slide, index) => {
+  // Manipulate or access each slide element here
+  // slide.style.transform = `translateX(${window.innerWidth * index}%)`;
+  slide.style.color = 'red';
+});

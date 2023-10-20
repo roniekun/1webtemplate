@@ -1,0 +1,56 @@
+.container{
+    width: 100%;
+    background-color: red;
+    display: flex;
+    height: auto;
+}
+.descContainer{
+    display: flex;
+    padding: 5%;
+}
+.slider{
+    scroll-snap-type:  x mandatory;
+    width: 500px;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 3px;
+    object-fit: cover;
+    flex-shrink: 0;
+    height: 600px;
+    overflow-x:scroll;
+    overflow-y: hidden;
+    position: relative;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+    }
+
+
+.slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    height: 600px;
+    flex-shrink: 0;
+    width: 500px;
+    background-color: gray;
+    scroll-snap-align: center;
+}
+
+@media(max-width:600px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .slider{
+        width: 100%;
+    }
+    .slides{
+        width: 100%;
+    }
+}
