@@ -28,6 +28,8 @@ useEffect(() => {
     className={styles.container} >
       <div className={styles.content}
                 ref={content}>  
+          <div className={styles.linksContainer}>
+        <h5 className={styles.title}>Navigations</h5>
        < Navlinks
         isToggleMenu={isToggleMenu}
         setToggleMenu={setToggleMenu}
@@ -38,7 +40,7 @@ useEffect(() => {
         linkProps={{color: 'whitesmoke',
                             fontSize: '32px',
                             textTransform: 'capitalize'}}/>
-        
+        </div>
       <div className={styles.socialContainer}>
         <h5 className={styles.title}>Socials</h5>
       <Socials

@@ -21,6 +21,36 @@
         height: 100%;
         overflow: hidden;
 
+    & .linksContainer{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            gap: 20px;
+
+    & .title{
+        color: gray;
+        font-size: 2.5vw;
+        font-weight: 500;
+        padding-block: 5%;
+        position: relative;
+        font-family: sans-serif;
+        text-transform: uppercase;
+
+    }
+    & .title::after{
+            content: '';
+            left: 0;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            background-color: lightgray;
+            height: 1px;
+    
+    }
+    }
+
      & .socialContainer{
             display: flex;
             flex-direction: column;
