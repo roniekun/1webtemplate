@@ -2,6 +2,7 @@ import styles from './index.module.css';
 import data from './data';
 import { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion'
 
 const Home = () => {
   const [selected, setSelected] = useState(0);
@@ -27,7 +28,11 @@ const Home = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <motion.div
+    initial={{opacity: 0}}
+    animate={{opacity:1}}
+    exit={{opacity: 0}}
+     className={styles.container}>
       <div className={styles.category}>
         <h5>Category</h5>
         <div className={styles.lists}>
@@ -51,7 +56,7 @@ const Home = () => {
             </div>
         ) )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
