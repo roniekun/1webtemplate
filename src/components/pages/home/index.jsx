@@ -3,6 +3,7 @@ import data from './data';
 import { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
+import {ReactComponent  as Southeast } from '../../../assets/icons/svg/southeast.svg'
 
 const Home = () => {
   const [selected, setSelected] = useState(0);
@@ -37,8 +38,10 @@ const Home = () => {
         <h5>Category</h5>
         <div className={styles.lists}>
           {data.map((category, index) => (
-            <li onClick={() => handleClick(index)} key={index}>
-              {category.category}
+            <li key={index} onClick={() => handleClick(index)} >
+              {category.category}<span className={styles.svgContainer}>
+              <Southeast/>
+              </span> 
             </li>
           ))}
         </div>

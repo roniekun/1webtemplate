@@ -6,5 +6,6 @@
     & .link{
         font-size: 16px;
         text-decoration: none;
+        user-select: none;
     }
 }

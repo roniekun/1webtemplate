@@ -17,37 +17,68 @@
         position: relative;
         width: 15vw;
         height: 100%;
+        
 
         & h5{
-            font-size: 20px;
+            font-size: 24px;
         }
+        
 
         .lists{
             list-style: none;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap:15px;
             width: 100%;
             height: 100%;
             padding: 1em;
-    
+            font-family: 'Raleway', monospace;
+
             & li{
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                padding: .5em;
+                border-radius: 10px;
+                align-items: center;
                 cursor: pointer;
-                border-radius: 5px;
                 align-self: center;
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: 450;
-                font-family: 'Roboto Mono', monospace;
                 text-transform: capitalize;
-                padding: 10px;
-                width: 150px;
                 text-align: center;
-                padding-inline:  1em;
+                
            }
           &  li:hover{
                    filter: brightness(90%);
                    color: gray;
+                   font-weight: 500;
                    }
+              &  li:hover .svgContainer{
+                    transition: transform .3s;
+                   transform: rotate(-45deg);
+                   }
+
+            &   .svgContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                aspect-ratio: 1/1;
+                width: fit-content;
+                background-color: lightgray;
+                border-radius: 10px;
+                padding: .5em;
+                /* transform: rotate(-90deg); */
+
+                & svg{
+                        width: 12px;
+                        height: 12px;
+                }
+             
+        }
+
+    
             }
     }
 
@@ -102,11 +133,7 @@
             gap: 10px;
             
             & li{
-                padding: .7em;
-                padding-inline: 1em;
                 width: fit-content;
-                border: lightgrey 1px solid;
-
             }
 
          }
