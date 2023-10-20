@@ -30,7 +30,6 @@
         width: 100%;
         box-sizing: border-box;
         height: auto;
-        background-color: lightgray;
         min-height: 10vh;
         display: flex;
         flex-direction: column;

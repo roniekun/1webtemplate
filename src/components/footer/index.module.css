@@ -5,7 +5,7 @@
     width: 100vw;
     padding: 2em;
     justify-content: center;
-
+    background-color: 'whitesmoke';
     .cta{
         width: 100%;
         align-self: flex-start;
