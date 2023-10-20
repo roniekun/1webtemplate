@@ -8,13 +8,12 @@ const Footer = () => {
     <div className={styles.container}>
       <div>
         <Socials
-        containerProps={{gap:'6px'}}
-        linkProps={{width:'fit-content',
-                            fontSize: '12px',
-                            color: 'black',
-                            textTransform: 'uppercase',
-                            fontFamily: 'Roboto Mono'}}
-        displayNames={true}/>
+        containerProps={{gap:'2vw'}}
+        iConProps={{width:'fit-content',
+                            fill: 'black',
+                            opacity: '.8'
+                           }}
+        displayIcons={true}/>
       </div>
       <h5 className={styles.date}>&copy;All Rights Reserved {date.getFullYear()}</h5>
        

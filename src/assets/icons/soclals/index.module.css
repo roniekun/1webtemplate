@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
 }
 
 .socialLink{
@@ -24,15 +25,15 @@
    user-select: none;
 }
 
-.icoCcontainer svg {
-    width: 25px;
-    height: 25px;
+.iconContainer svg {
+    width: 1.4vw;
+    height: 1.4vw;
     opacity: 1;
     transition: .3s;
     margin: 0;
   }
 
-.icoCcontainer svg:hover{
+.iconContainer svg:hover{
 
     fill: white;
     transition: .3s;
@@ -54,7 +55,7 @@
 }
 
 .iconContainer svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height:18px;
 }
 }
