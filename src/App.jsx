@@ -34,6 +34,7 @@ requestAnimationFrame(raf)
     <div className={styles.container} > 
  <Navigation
  isMediumScreen={isMediumScreen}
+ setToggleMenu={setToggleMenu}
   isToggleMenu={isToggleMenu}/>
 
     <div className={styles.header}> 

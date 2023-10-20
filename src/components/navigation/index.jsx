@@ -3,7 +3,7 @@ import styles from './index.module.css'
 import { gsap } from 'gsap'
 import Navlinks from './navlinks'
 
-const Navigation = ({isToggleMenu, isMeddiumScreen}) => {
+const Navigation = ({isToggleMenu, setToggleMenu, isMeddiumScreen}) => {
   const container = useRef(null);
   const content = useRef(null);
 
@@ -28,6 +28,8 @@ useEffect(() => {
       <div className={styles.content}
                 ref={content}>  
        < Navlinks
+        isToggleMenu={isToggleMenu}
+        setToggleMenu={setToggleMenu}
         containerProps={{flexDirection: 'column',
                                         justifyContent: 'center',
                                         alignItems: 'center', 

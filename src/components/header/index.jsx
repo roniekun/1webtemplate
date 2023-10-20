@@ -6,7 +6,6 @@ import { Turn as Hamburger } from 'hamburger-react' //https://hamburger-react.ne
 const Header = ({isMediumScreen, isToggleMenu, setToggleMenu}) => {
   const handleClick = () => {
     setToggleMenu(!isToggleMenu);
-    console.log(!isToggleMenu)
   }
   return (
     <div className={styles.container}  >

@@ -2,6 +2,8 @@ import styles from './index.module.css'
 import { Routes, Route } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import About from '../pages/about'
+import Contact from '../pages/contact'
 import Home from '../pages/home'
 import Portrait from '../pages/portraits'
 import Wedding from '../pages/wedding'
@@ -15,6 +17,8 @@ const Main = () => {
     <div className={styles.container}>
       <Routes location={location} key={location.key}>     
               <Route exact path='/' element={<Home/>}/>
+              <Route exact path='/about' element={<About/>}/>
+              <Route exact path='/contact' element={<Contact/>}/>
               <Route exact path='/gallery-portraits' element={<Portrait/>}/>
               <Route exact path='/gallery-weddings' element={<Wedding/>}/>
               <Route exact path='/gallery-birthdays' element={<Birthday/>}/>
