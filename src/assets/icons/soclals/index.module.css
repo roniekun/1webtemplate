@@ -35,12 +35,13 @@
 
 .iconContainer svg:hover{
 
-    fill: white;
     transition: .3s;
+    filter: brightness(90%);
 }
 
 .socialLink:hover{
-  color: whitesmoke;
+     filter: brightness(90%);
+
 }
   
 @media (max-width: 1024px) {

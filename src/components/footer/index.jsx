@@ -11,7 +11,7 @@ const Footer = () => {
         containerProps={{gap:'2vw'}}
         iConProps={{width:'fit-content',
                             fill: 'black',
-                            opacity: '.8'
+                            opacity: '.7'
                            }}
         displayIcons={true}/>
       </div>

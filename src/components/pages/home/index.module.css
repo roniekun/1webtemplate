@@ -40,7 +40,7 @@
                 justify-content: center;
                 gap: 5px;
                 padding: .5em;
-                border-radius: 10px;
+                border-radius: 20px;
                 align-items: center;
                 cursor: pointer;
                 align-self: center;
@@ -48,16 +48,16 @@
                 font-weight: 450;
                 text-transform: capitalize;
                 text-align: center;
-                
+                padding-inline: 1em;
+                background-color: lightgray;
            }
           &  li:hover{
                    filter: brightness(90%);
-                   color: gray;
                    font-weight: 500;
                    }
               &  li:hover .svgContainer{
-                    transition: transform .3s;
-                   transform: rotate(-45deg);
+                    transition: .3s;
+                    filter: brightness(90%);
                    }
 
             &   .svgContainer{
@@ -67,7 +67,7 @@
                 aspect-ratio: 1/1;
                 width: fit-content;
                 background-color: lightgray;
-                border-radius: 10px;
+                border-radius: 50%;
                 padding: .5em;
                 /* transform: rotate(-90deg); */
 
