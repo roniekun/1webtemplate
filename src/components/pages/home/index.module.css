@@ -94,7 +94,9 @@
          }
         
         & .gallery{
-            width: 100vw;
+            width: 95vw;
+            background-color: gray;
+            align-self: center;
         }
 
 }
