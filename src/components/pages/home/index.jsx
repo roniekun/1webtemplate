@@ -7,6 +7,17 @@ const Home = () => {
   const [selected, setSelected] = useState(0);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    setSelected(selected);
+    const interval = setInterval(() => {
+      setSelected((prevSelected) => (prevSelected === data.length - 1 ? 0 : prevSelected + 1));
+    }, 3500);
+    
+    return () => {
+      clearInterval(interval); 
+    };
+  }, [selected]);
+
   const handleClick = (index) => {
     setSelected(index);
   };
@@ -14,16 +25,6 @@ const Home = () => {
   const handleImgClick = (to) =>{
     navigate(to);
   }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSelected((prevSelected) => (prevSelected === data.length - 1 ? 0 : prevSelected + 1));
-    }, 3500);
-
-    return () => {
-      clearInterval(interval); 
-    };
-  }, []);
 
   return (
     <div className={styles.container}>

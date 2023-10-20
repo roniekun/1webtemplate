@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './index.module.css'
 
 
-const Events = () => {
+const Family = () => {
   return (
-    <div>Events</div>
+    <div>Family</div>
   )
 }
 
-export default Events
+export default Family

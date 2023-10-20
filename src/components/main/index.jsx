@@ -7,8 +7,7 @@ import Portrait from '../pages/portraits'
 import Wedding from '../pages/wedding'
 import Birthday from '../pages/birthday'
 import Product from '../pages/product'
-import Events from '../pages/events'
-
+import Family from '../pages/family'
 
 const Main = () => {
   const location = useLocation();
@@ -20,7 +19,7 @@ const Main = () => {
               <Route exact path='/gallery-weddings' element={<Wedding/>}/>
               <Route exact path='/gallery-birthdays' element={<Birthday/>}/>
               <Route exact path='/gallery-products' element={<Product/>}/>
-              <Route exact path='/gallery-events' element={<Events/>}/>
+              <Route exact path='/gallery-events' element={<Family/>}/>
 
       </Routes>
         </div>

@@ -8,6 +8,8 @@
     background-color: #181818;
     z-index: 9;
     overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 
     .content{
         width: 100%;

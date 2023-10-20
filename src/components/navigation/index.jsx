@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import styles from './index.module.css'
 import { gsap } from 'gsap'
+import Navlinks from './navlinks'
 
 const Navigation = ({isToggleMenu, isMeddiumScreen}) => {
   const container = useRef(null);
@@ -25,8 +26,15 @@ useEffect(() => {
     ref={container}
     className={styles.container} >
       <div className={styles.content}
-                ref={content}>
-
+                ref={content}>  
+       < Navlinks
+        containerProps={{flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        alignItems: 'center', 
+                                        gap: '20px'}}
+        linkProps={{color: 'whitesmoke',
+                            fontSize: '32px',
+                            textTransform: 'capitalize'}}/>
       </div>
     </div>
   )
