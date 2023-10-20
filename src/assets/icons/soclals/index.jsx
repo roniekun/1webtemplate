@@ -12,7 +12,7 @@ const Socials = ({
       linkProps,
       iConProps,
       containerProps,
-}) => {
+                      }) => {
 
   const socialMediaLinks = [
 
@@ -45,7 +45,6 @@ const Socials = ({
   ];
 
   return (
-  
         <div className={styles.socialLinksContainer} 
         style={{...containerProps}}>
           {socialMediaLinks.map((link) => (

@@ -17,5 +17,7 @@
     }
     .date{
         font-size: 12px;
+        font-family: 'Roboto Mono', sans-serif;
+        text-transform: uppercase;
     }
 }

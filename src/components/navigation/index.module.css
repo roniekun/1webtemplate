@@ -12,6 +12,42 @@
     border-bottom-right-radius: 10px;
 
     .content{
+        display: flex;
         width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-block: 10%;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+
+     & .socialContainer{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100px;
+            width: 100%;
+            align-self: flex-end;
+        
+        &   .title{
+                color: whitesmoke;
+                font-size: 2.5vw;
+                font-weight: 500;
+                font-family: sans-serif;
+                text-transform: uppercase;
+            }
+    
+        }
+       & .socialContainer::before{
+            content: '';
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            background-color: lightgray;
+            height: 1px;
+        }
     }
+   
+    
 }

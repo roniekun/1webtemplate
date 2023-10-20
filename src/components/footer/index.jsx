@@ -12,7 +12,8 @@ const Footer = () => {
         linkProps={{width:'fit-content',
                             fontSize: '12px',
                             color: 'black',
-                          fontFamily: 'Roboto Mono'}}
+                            textTransform: 'uppercase',
+                            fontFamily: 'Roboto Mono'}}
         displayNames={true}/>
       </div>
       <h5 className={styles.date}>&copy;All Rights Reserved {date.getFullYear()}</h5>
