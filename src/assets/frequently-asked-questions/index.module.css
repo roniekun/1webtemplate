@@ -11,21 +11,28 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 20px;
-        min-height: fit-content;
+        gap: 6px;
 
         .questionContainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            position: relative;
             cursor: pointer;
             font-size: 14px;
+            /* border: 1px solid black; */
+            width: 100%;
         }
         .questionContainer::after{
             content: '';
-            width: 90%;
+            width: 100%;
             position: absolute;
             height: 1px;
             z-index: 1;
             background-color: gray;
             left: 50%;
+            bottom: 0;
             transform: translateX(-50%);
         }
         .answerContainer{

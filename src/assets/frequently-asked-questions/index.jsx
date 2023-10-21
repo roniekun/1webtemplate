@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import data from './data';
 import styles from './index.module.css';
 import { gsap } from 'gsap';
+import {ReactComponent as Active} from '../../../public/svg/active.svg';
+import {ReactComponent as Inactive} from '../../../public/svg/inactive.svg';
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FAQItems = () => {
@@ -45,13 +47,14 @@ const FAQItems = () => {
              key={index} className={styles.questionContainer}>
             <p className={styles.question}> 
             <span>{index + 1}.   </span> { faqItem.question}</p>
+           { expandedIndex === index  ?   <Inactive/> : <Active/>}
             </motion.div>
         <AnimatePresence>
        { expandedIndex===index &&
               <motion.div 
-              initial={{y: 10}}
+              initial={{y: 5}}
               animate={{y: 0, transition:{duration: .3}}}
-              exit={{y: -20, opacity: 0, transition:{duration: 1}}}
+              exit={{y: -10, opacity: 0, transition:{duration: 1}}}
               className={styles.answerContainer}>
                 <motion.p 
                  className={styles.answer}> 
