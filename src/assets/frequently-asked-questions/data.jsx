@@ -1,15 +1,15 @@
-const FaqData = [
+const data = [
     {
       question: "What is your return policy?",
       answer: "Our return policy allows you to return items within 30 days of purchase for a full refund. Please make sure the items are in their original condition with tags attached."
     },
     {
-      question: "How can I track my order?",
-      answer: "You can easily track your order by logging into your account on our website and navigating to the 'Order History' section. There, you will find tracking information for your recent orders."
+      question: "Do you offer international shipping?",
+      answer: "Shipping fees and delivery times may vary depending on your location. Please check our shipping information page for more details."
     },
     {
-      question: "Do you offer international shipping?",
-      answer: "Yes, we offer international shipping to most countries. Shipping fees and delivery times may vary depending on your location. Please check our shipping information page for more details."
+      question: "How can I track my order?",
+      answer: "You can easily track your order by logging into your account on our website and navigating to the 'Order History' section. There, you will find tracking information for your recent orders."
     },
     {
       question: "What payment methods do you accept?",
@@ -41,5 +41,5 @@ const FaqData = [
     }
   ];
   
- export default FaqData;
+ export default data;
   

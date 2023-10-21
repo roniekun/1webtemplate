@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import About from '../pages/about'
 import Contact from '../pages/contact'
+import FAQ from '../pages/FAQ'
 import Home from '../pages/home'
 import Portrait from '../pages/portraits'
 import Wedding from '../pages/wedding'
@@ -19,6 +20,7 @@ const Main = () => {
       <Routes location={location} key={location.key}>     
               <Route exact path='/' element={<Home/>}/>
               <Route exact path='/about' element={<About/>}/>
+               <Route exact path='/frequently-asked-questions' element={<FAQ/>}/>
               <Route exact path='/contact' element={<Contact/>}/>
               <Route exact path='/gallery-portraits' element={<Portrait/>}/>
               <Route exact path='/gallery-weddings' element={<Wedding/>}/>
