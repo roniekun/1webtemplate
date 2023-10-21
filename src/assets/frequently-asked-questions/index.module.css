@@ -23,6 +23,7 @@
             font-size: 14px;
             /* border: 1px solid black; */
             width: 100%;
+            z-index: 2;
         }
         .questionContainer::after{
             content: '';
@@ -42,6 +43,9 @@
             align-self: center;
             font-size: 14px;
             line-height: 1.5em;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
         }
 
     }
