@@ -15,7 +15,7 @@ const Main = () => {
   const location = useLocation();
   return (
     <div className={styles.container}>
-      <AnimatePresence>
+      <AnimatePresence mode='wait'>
       <Routes location={location} key={location.key}>     
               <Route exact path='/' element={<Home/>}/>
               <Route exact path='/about' element={<About/>}/>
@@ -24,7 +24,7 @@ const Main = () => {
               <Route exact path='/gallery-weddings' element={<Wedding/>}/>
               <Route exact path='/gallery-birthdays' element={<Birthday/>}/>
               <Route exact path='/gallery-products' element={<Product/>}/>
-              <Route exact path='/gallery-events' element={<Family/>}/>
+              <Route exact path='/gallery-family' element={<Family/>}/>
       </Routes>
       </AnimatePresence>
         </div>

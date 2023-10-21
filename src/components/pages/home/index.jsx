@@ -30,20 +30,21 @@ const Home = () => {
 
   return (
     <motion.div
-    initial={{opacity: 0}}
-    animate={{opacity:1}}
-    exit={{opacity: 0}}
-     className={styles.container}>
-      <div className={styles.category}>
-        <h5>Category</h5>
-        <div className={styles.lists}>
-          {data.map((category, index) => (
-            <li key={index} onClick={() => handleClick(index)} >
-              {category.category}<span className={styles.svgContainer}>
-              <Southeast/>
-              </span> 
-            </li>
-          ))}
+          initial={{opacity: 0, y: '50%' }}
+          animate={{opacity:1, y:'0%' }}
+          transition={{duration: .3}}
+          exit={{opacity: 0, y: '-10%', scale: .95}}
+          className={styles.container}>
+            <div className={styles.category}>
+              <h5>Category</h5>
+              <div className={styles.lists}>
+                {data.map((category, index) => (
+                  <li key={index} onClick={() => handleClick(index)} >
+                    {category.category}<span className={styles.svgContainer}>
+                    <Southeast/>
+                    </span> 
+                  </li>
+                ))}
         </div>
       </div>
       <div className={styles.gallery}>
