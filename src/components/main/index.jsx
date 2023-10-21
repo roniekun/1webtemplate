@@ -15,7 +15,7 @@ const Main = () => {
   const location = useLocation();
   return (
     <div className={styles.container}>
-      <AnimatePresence >
+      <AnimatePresence initial={false} mode='wait'>
       <Routes location={location} key={location.key}>     
               <Route exact path='/' element={<Home/>}/>
               <Route exact path='/about' element={<About/>}/>
@@ -28,7 +28,6 @@ const Main = () => {
       </Routes>
       </AnimatePresence>
         </div>
-
   )
 }
 

@@ -3,13 +3,11 @@ import { NavLink, useNavigate } from "react-router-dom"
 import styles from './index.module.css'
 
 const Navlinks = ({linkProps, containerProps,setToggleMenu,isToggleMenu}) => {
-    const navigate = useNavigate();
 
 const handleClick = (linkTo) => {
     setTimeout(() => {
         window.scrollTo({ top: 0 });
         setToggleMenu(false);
-        navigate(linkTo);
       }, 300);
 };
   return (
@@ -18,7 +16,8 @@ const handleClick = (linkTo) => {
     {links.map((link, index)=>(
         <NavLink 
         key={index} 
-        onClick={()=> handleClick(link.to)}
+        to={link.to}
+        onClick={handleClick}
         className={styles.link}
         style={{...linkProps}}>
              {link.text}

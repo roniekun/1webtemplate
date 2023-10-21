@@ -30,11 +30,11 @@ const Home = () => {
 
   return (
     <motion.div
-          initial={{opacity: 0, y: '50%' }}
-          animate={{opacity:1, y:'0%' }}
+          initial={{ y: 100, zIndex: 2 }}
+          animate={{opacity:1, y:0, zIndex: 1 }}
           transition={{duration: .3}}
-          exit={{opacity: 0, y: '-10%', scale: .95}}
-          className={styles.container}>
+          exit={{opacity: 0, y: -100, scale: .95}}
+          className={styles.secta}>
             <div className={styles.category}>
               <h5>Category</h5>
               <div className={styles.lists}>
