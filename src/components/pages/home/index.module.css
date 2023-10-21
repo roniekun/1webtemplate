@@ -102,12 +102,12 @@
          .category{
          width: 100vw;
          height: fit-content;
-         padding: 1em;
          justify-content: center;
          align-items: center;
+         padding: .5em;
 
          & h5{
-         margin: 5vw;
+         margin: 2vw;
          }
         
          & .lists{
@@ -117,6 +117,7 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 10px;
+            padding: .5em;
             
             & li{
                 width: fit-content;
