@@ -4,6 +4,7 @@ import { useState, useEffect} from 'react';
 import {motion} from 'framer-motion'
 import {ReactComponent  as Southeast } from '../../../assets/icons/svg/southeast.svg'
 import Slideshow from '../../../assets/slideshow-fade';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [selected, setSelected] = useState(0);
@@ -22,6 +23,13 @@ const Home = () => {
   const handleClick = (index) => {
     setSelected(index);
   };
+
+  const navigate = useNavigate();
+
+  const handleImgClick = (to) =>{
+    navigate(to);
+    console.log('clicked');
+  }
 
   return (
     <motion.div
@@ -45,6 +53,7 @@ const Home = () => {
       <div className={styles.gallery}>
           {data.map((image, index) => (
          <Slideshow 
+         onClick={()=>handleImgClick(image.to)}
          containerProps={{ opacity: index === selected ? 1 : 0,
           transitionDuration: '.7s',
            zIndex: index === selected ? 1 : -1}}

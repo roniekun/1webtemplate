@@ -1,19 +1,17 @@
 import React from 'react'
 import styles from './index.module.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
-const Slideshow = ({image, index, containerProps}) => {
-    const navigate = useNavigate();
-    const handleImgClick = (to) =>{
-        navigate(to);
-      }
+const Slideshow = ({image, index, containerProps, onClick}) => {
+
+ 
 
   return (
     <div
     key={index}
     style={{...containerProps}}
-    className={styles.imgContainer}
-    onClick={()=>handleImgClick(image.to)} >
+    onClick={onClick}
+    className={styles.imgContainer} >
     <h1>{image.category}</h1>
   </div>
   )
