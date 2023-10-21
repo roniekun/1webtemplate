@@ -1,13 +1,12 @@
 import styles from './index.module.css';
 import data from './data';
 import { useState, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
 import {ReactComponent  as Southeast } from '../../../assets/icons/svg/southeast.svg'
+import Slideshow from '../../../assets/slideshow-fade';
 
 const Home = () => {
   const [selected, setSelected] = useState(0);
-  const navigate = useNavigate();
 
   useEffect(() => {
     setSelected(selected);
@@ -23,10 +22,6 @@ const Home = () => {
   const handleClick = (index) => {
     setSelected(index);
   };
-
-  const handleImgClick = (to) =>{
-    navigate(to);
-  }
 
   return (
     <motion.div
@@ -49,15 +44,11 @@ const Home = () => {
       </div>
       <div className={styles.gallery}>
           {data.map((image, index) => (
-            <div
-              key={index}
-              style={{ opacity: index === selected ? 1 : 0,
-                            transitionDuration: '.7s',
-                              zIndex: index === selected ? 1 : -1}}
-              className={styles.imgContainer}
-              onClick={()=>handleImgClick(image.to)} >
-              <h1>{image.category}</h1>
-            </div>
+         <Slideshow 
+         containerProps={{ opacity: index === selected ? 1 : 0,
+          transitionDuration: '.7s',
+           zIndex: index === selected ? 1 : -1}}
+           image={image} key={index}/>
         ) )}
       </div>
     </motion.div>
