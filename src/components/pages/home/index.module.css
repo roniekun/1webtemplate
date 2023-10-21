@@ -39,18 +39,21 @@
             & li{
                 display: flex;
                 justify-content: center;
-                padding: .5em;
-                border-radius: 20px;
+                line-height: 1.5em;
+                border-radius: 30px;
                 align-items: center;
                 cursor: pointer;
                 align-self: center;
-                font-size: 18px;
                 font-weight: 300;
-                text-transform: capitalize;
+                text-transform: uppercase;
                 text-align: center;
+                gap: 2px;
                 padding-inline: 1em;
-                background-color: lightgray;
+                padding-block:  .2em;
+                border:  1px solid gray;
+                font-size: 16px;
            }
+
           &  li:hover{
                    filter: brightness(90%);
                    }
@@ -65,8 +68,8 @@
                 align-items: center;
                 aspect-ratio: 1/1;
                 width: fit-content;
-                background-color: lightgray;
                 border-radius: 50%;
+                border: 1px solid gray;
                 padding: .2em;
                 /* transform: rotate(-90deg); */
 
@@ -114,13 +117,14 @@
             flex-direction: row;
             padding: 0;
             width: 95vw;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
             gap: 10px;
             padding: .5em;
             
             & li{
                 width: fit-content;
+                font-size: 12px;
             }
 
          }

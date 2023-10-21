@@ -43,9 +43,8 @@ const Home = () => {
               <div className={styles.lists}>
                 {data.map((category, index) => (
                   <li key={index} onClick={() => handleClick(index)} >
-                    {category.category}<span className={styles.svgContainer}>
-                    <Southeast/>
-                    </span> 
+                    {category.category}
+
                   </li>
                 ))}
         </div>
@@ -65,3 +64,4 @@ const Home = () => {
 };
 
 export default Home;
+
