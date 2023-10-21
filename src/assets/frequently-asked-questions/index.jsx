@@ -54,7 +54,7 @@ const FAQItems = () => {
               <motion.div 
               initial={{y: 5}}
               animate={{y: 0, transition:{duration: .3}}}
-              exit={{y: -10, opacity: 0, transition:{duration: 1}}}
+              exit={{y: -10, opacity: 0, transition:{duration: .5}}}
               className={styles.answerContainer}>
                 <motion.p 
                  className={styles.answer}> 

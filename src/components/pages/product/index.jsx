@@ -6,10 +6,10 @@ import {motion} from 'framer-motion'
 const Product = () => {
   return (
     <motion.div
-    initial={{ y: 100, zIndex: 2 }}
-          animate={{opacity:1, y:0, zIndex: 1 }}
-          transition={{duration: .3}}
-          exit={{opacity: 0, y: -100, scale: .95}}
+    initial={{ y: 50, zIndex: 2 }}
+    animate={{opacity:1, y:0, zIndex: 1 }}
+    transition={{duration: .3}}
+    exit={{opacity: 0, y: -50, scale: .95}}
      className={styles.container}>Product
     </motion.div>
   )
