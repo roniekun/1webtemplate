@@ -64,4 +64,8 @@
         }
 
     }
+    &  .items:hover{
+        filter: brightness(90%);
+    
+    }
 }

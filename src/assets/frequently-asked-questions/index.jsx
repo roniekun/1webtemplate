@@ -65,8 +65,8 @@ const FAQItems = () => {
           {/* {expandedIndex === index && */}
               <motion.div 
               ref={answers[index]}
-              initial={{  y: '-10%', transition:{duration: .5}}}
-              animate={{ y: expandedIndex ===index ?  '0%' : '-10%' , 
+              initial={{  transition:{duration: .5}}}
+              animate={{ y: expandedIndex ===index ?  '0%' : '10%' , 
                                    
                                      display: expandedIndex ===index ? 'block' : 'none',
                                      transition:{duration: .5}}}

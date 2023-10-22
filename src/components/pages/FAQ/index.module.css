@@ -7,23 +7,27 @@
     min-height: 100vh;
     position: relative;
     width: 100vw;
-    font-family: sans-serif;
     padding: 5%;
 
     & h2{
-        padding: 1em;
+        padding: .5em;
         border: 1px solid gray;
         border-radius: 3px;
+        align-self: flex-start;
+        margin-top: 5%;
+        margin-inline: 1em;
         
     }
 }
 
 @media(max-width: 1024px){
+
     .container{
         padding: 0;
 
         & h2{
             font-size: 18px;
+            margin-top: 15%;
     
         }
     }
