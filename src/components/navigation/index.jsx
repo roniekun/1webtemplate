@@ -40,6 +40,7 @@ useEffect(() => {
         linkProps={{color: 'lightgray',
                             fontSize: isSmallScreen ? '32px' : '45px',
                             fontWeight: '450',
+                            fontFamily: 'Noto Serif Display, sans-serif',
                             textTransform: 'capitalize'}}/>
         </div>
       <div className={styles.socialContainer}>

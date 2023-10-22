@@ -39,6 +39,10 @@ const FAQItems = () => {
     setExpandedIndex(index);
   };
 
+  const handleMouseLeave = () => {
+    setExpandedIndex(null);
+  };
+  
   return (
     <div className={styles.container}>
         {data.map((faqItem, index) => (
@@ -46,7 +50,7 @@ const FAQItems = () => {
             className={styles.items}
             key={index}
             onClick={() => handleClick(index)}
-          >
+            onMouseLeave={()=> handleMouseLeave()}>
 
             <motion.div
             ref={questions[index]}

@@ -5,19 +5,21 @@
     padding: 1em;
     height: auto;
     min-height: 100vh;
+    gap: 20px;
     
    & .items{
-        display:inline-block;
+        display:flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         flex-basis: content;
         position: relative;
         height: auto;
+        gap: 5px;
 
         .questionContainer{
             position: relative;
-            background-color: gainsboro;
+            background-color: rgba(251, 250, 250, .4);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,7 +38,7 @@
             z-index: 4;
             background-color: gray;
             left: 50%;
-            bottom: 1.5px;
+            bottom: 0;
             transform: translateX(-50%);
         }
         .answerContainer{
@@ -48,9 +50,11 @@
             line-height: 1.5em;
             width: 100%;
             height: 100%;
+            padding-block: 1em;
             padding-inline: .5em;
             text-align: center;
             display: none;
+            background-color: lightgrey;
             transform: translateY(-100%);
 
 
