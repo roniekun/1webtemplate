@@ -5,12 +5,17 @@ import { gsap } from 'gsap';
 import {ReactComponent as Active} from '../../../public/svg/active.svg';
 import {ReactComponent as Inactive} from '../../../public/svg/inactive.svg';
 import { motion, AnimatePresence } from 'framer-motion'
+import { document } from 'postcss';
 
 const FAQItems = () => {
 
   const [expandedIndex, setExpandedIndex] = useState(null);
-  const answerRefs = data.map(() => useRef(null));
+  // const answerRefs = data.map(() => useRef(null));
 
+    const answers = data.map(() => useRef(null));
+    const questions = data.map(() => useRef(null));
+
+  
   // useEffect(() => {
     
   //   answerRefs.forEach(( answerRef, index) => {
@@ -37,32 +42,40 @@ const FAQItems = () => {
   return (
     <div className={styles.container}>
         {data.map((faqItem, index) => (
-          <div
+          <motion.div
             className={styles.items}
             key={index}
             onClick={() => handleClick(index)}
           >
+
             <motion.div
-            transition={{duration: 1}}
+            ref={questions[index]}
+            transition={{duration: .5}}
              key={index} className={styles.questionContainer}>
             <p className={styles.question}> 
             <span>{index + 1}.   </span> { faqItem.question}</p>
            { expandedIndex === index  ?   <Inactive/> : <Active/>}
             </motion.div>
+    
         <AnimatePresence>
-       { expandedIndex===index &&
+          {/* {expandedIndex === index && */}
               <motion.div 
-              initial={{y: 5}}
-              animate={{y: 0, transition:{duration: .3}}}
-              exit={{y: -10, opacity: 0, transition:{duration: .5}}}
+              ref={answers[index]}
+              initial={{  y: '-10%', transition:{duration: .5}}}
+              animate={{ y: expandedIndex ===index ?  '0%' : '-10%' , 
+                                   
+                                     display: expandedIndex ===index ? 'block' : 'none',
+                                     transition:{duration: .5}}}
+              exit={{y: '-100%', opacity:0, display :'none' , transition:{duration: .5}}}
               className={styles.answerContainer}>
                 <motion.p 
+                  animate={{display: expandedIndex === index ? 'block':  'none'}}
                  className={styles.answer}> 
                 {faqItem.answer}
                 </motion.p>
-              </motion.div>}
-              </AnimatePresence>
-          </div>
+              </motion.div>
+        </AnimatePresence>
+          </motion.div>
         ))}
     </div>
   );

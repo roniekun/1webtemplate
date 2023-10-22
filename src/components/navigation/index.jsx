@@ -39,6 +39,7 @@ useEffect(() => {
                                         gap: '20px'}}
         linkProps={{color: 'lightgray',
                             fontSize: isSmallScreen ? '32px' : '45px',
+                            fontWeight: '450',
                             textTransform: 'capitalize'}}/>
         </div>
       <div className={styles.socialContainer}>
@@ -49,13 +50,11 @@ useEffect(() => {
                                       gap: '10px',
                                        flexWrap: 'wrap',
                                       height: 'fit-content'}}
-      linkProps={{fontSize:  isSmallScreen ? '18px': '32px', 
-                          fontFamily: 'Teko, monospace',
+      linkProps={{fontSize:  isSmallScreen ? '12px': '32px', 
                             width: 'fit-content',
                             height: 'fit-content',
-                            fontWeight: '300',
                             textTransform: 'uppercase',
-                            color: 'lightgray' }} />
+                            color: 'whitesmoke' }} />
       </div>
       </div>
     </div>

@@ -9,10 +9,12 @@ const Footer = () => {
       <div>
         <Socials
         containerProps={{gap:'14px'}}
-          linkProps={{fill: 'white',opacity: '.7'}}
-        displayIcons={true}/>
+          linkProps={{color: 'whitesmoke',
+                                textTransform: 'uppercase',
+                                fontSize: '14px'}}
+          displayNames={true}/>
       </div>
-      <h5 className={styles.date}>&copy;All Rights Reserved {date.getFullYear()}</h5>
+      <h5 className={styles.date}>&copy; {date.getFullYear()} All Rights Reserved </h5>
        
     </div>
   )

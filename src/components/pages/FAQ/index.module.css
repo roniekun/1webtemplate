@@ -12,6 +12,9 @@
 
     & h2{
         padding: 1em;
+        border: 1px solid gray;
+        border-radius: 3px;
+        
     }
 }
 
@@ -20,8 +23,8 @@
         padding: 0;
 
         & h2{
-            padding: .5em;
             font-size: 18px;
+    
         }
     }
 }
