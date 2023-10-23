@@ -54,6 +54,10 @@
             background-color: lightgrey;
             overflow: hidden;
             height: 1px;
+
+            & .answer{
+                padding: 1em;
+            }
         }
 
     }

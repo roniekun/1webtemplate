@@ -3,8 +3,11 @@ import data from './data';
 import { useState, useEffect} from 'react';
 import {motion} from 'framer-motion'
 import {ReactComponent  as Southeast } from '../../../assets/icons/svg/southeast.svg'
-import Slideshow from '../../../assets/slideshow-fade';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Slideshow from '../../../assets/slideshow-fade';
+import Socials from '../../../assets/icons/soclals';
+
 
 const Home = () => {
   const [selected, setSelected] = useState(0);
@@ -32,19 +35,35 @@ const Home = () => {
   }
 
   return (
+  <motion.div 
+  initial={{ y: 20, zIndex: 2 }}
+  animate={{opacity:1, y:0, zIndex: 1 }}
+  transition={{duration: .3}}
+  exit={{opacity: 0, y: -20, scale: .95}}
+  className={styles.container}>
+    <div  className={styles.secta}>
+      <div className={styles.heroContainer}>
+      <h1 className={styles.hero}>
+          Journey to create timeless images
+      </h1>
+      <p>art of photography by Your Identity</p>
+      </div>
+      <div styles={styles.socialContainer}>
+    <Socials displayIcons={true}
+                    containerProps={{gap: '10px'}}
+                    linkProps={{}}/>
+    </div>
+      <NavLink> Explore</NavLink>
+    </div>
+
     <motion.div
-          initial={{ y: 100, zIndex: 2 }}
-          animate={{opacity:1, y:0, zIndex: 1 }}
-          transition={{duration: .3}}
-          exit={{opacity: 0, y: -50, scale: .95}}
-          className={styles.secta}>
+          className={styles.sectb}>
             <div className={styles.category}>
               <h5>Category</h5>
               <div className={styles.lists}>
                 {data.map((category, index) => (
                   <li key={index} onClick={() => handleClick(index)} >
                     {category.category}
-
                   </li>
                 ))}
         </div>
@@ -59,6 +78,7 @@ const Home = () => {
            image={image} key={index}/>
         ) )}
       </div>
+    </motion.div>
     </motion.div>
   );
 };

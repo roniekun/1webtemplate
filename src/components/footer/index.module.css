@@ -9,6 +9,8 @@
     color: lightgray;
     gap: 14px;
     padding: 2em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     .cta{
         width: 100%;

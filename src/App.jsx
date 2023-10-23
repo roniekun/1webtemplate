@@ -12,11 +12,14 @@ const App = () => {
   const [isToggleMenu, setToggleMenu] = useState (false)
   const lenis = new Lenis()
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-requestAnimationFrame(raf)
+  useEffect(() => {
+  
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
 
   useEffect(() => {
 
@@ -51,11 +54,6 @@ requestAnimationFrame(raf)
     <div className={styles.footer}>
       <Footer/>
       </div>
-      
-
-  
- 
-   
     </div>
   )
 }
