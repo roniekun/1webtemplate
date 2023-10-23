@@ -65,15 +65,12 @@ const FAQItems = () => {
           {/* {expandedIndex === index && */}
               <motion.div 
               ref={answers[index]}
-              initial={{  transition:{duration: .5}}}
-              animate={{ y: expandedIndex ===index ?  '0%' : '10%' , 
-                                   
-                                     display: expandedIndex ===index ? 'block' : 'none',
-                                     transition:{duration: .5}}}
-              exit={{y: '-100%', opacity:0, display :'none' , transition:{duration: .5}}}
+              initial={{ opacity: 0}}
+              transition={{duration: .5}}
+              animate={{ opacity: 1,  height: expandedIndex ===index ? '100%' : '0px'}}
+              exit={{ opacity:0 , height: '0px'}}
               className={styles.answerContainer}>
                 <motion.p 
-                  animate={{display: expandedIndex === index ? 'block':  'none'}}
                  className={styles.answer}> 
                 {faqItem.answer}
                 </motion.p>

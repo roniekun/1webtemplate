@@ -12,6 +12,7 @@
     margin-inline: 5%;
     white-space: nowrap;
     overflow: hidden;
+    width: fit-content;
 
     .logo{
         cursor: pointer;
@@ -22,6 +23,9 @@
         font-family: 'Noto Serif Display', sans-serif;
     }
 
+}
+.navlinkContainer{
+    margin-inline: 5%;
 }
 }
 .container::after{
