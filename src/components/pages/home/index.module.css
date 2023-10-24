@@ -3,19 +3,30 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 
 .secta{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     min-height: 100vh;
     background-color: gainsboro;
     padding: 5%;
+    padding-block: 10%;
+    position: relative;
     width: 100%;
-.heroContainer{
+    gap: 10px;
 
-    & h1{
+.heroContainer{
+    gap:10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .hero{
         text-transform:  uppercase;
+        font-family: 'Noto Serif Display', sans-serif;
+
     }
 
     & p{
@@ -23,6 +34,16 @@
     }
 
 }
+
+.explore{
+    font-size: 12px;
+    padding: 1em;
+    border: gray 1px solid;
+    border-radius: 3px;
+    width: fit-content;
+    padding-inline:2.5em;
+    text-decoration: none;
+    }
 
 }
 

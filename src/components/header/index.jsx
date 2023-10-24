@@ -17,6 +17,7 @@ const Header = ({isMediumScreen, isToggleMenu, setToggleMenu}) => {
                         <h1>&copy;Brand Identity</h1>
         </NavLink>
         </div>
+        <p style={{fontSize:'11px'}}>*This is a template*</p>
       {!isMediumScreen &&
       <div className={styles.navlinkContainer}>
         <Navlinks containerProps={{gap: '10px'}}

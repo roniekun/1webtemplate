@@ -16,6 +16,11 @@
         z-index: 9;
     }
 
+    .navigation{
+        width: auto;
+        height: auto;
+    }
+
     .main{
         grid-area: three;
         position: relative;
@@ -42,7 +47,6 @@
     .container{
         display: flex;
         flex-direction: column;
-        padding-top: 60px;
 
         .main{
             width: 100vw;

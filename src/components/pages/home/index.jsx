@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 import data from './data';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useRef} from 'react';
 import {motion} from 'framer-motion'
 import {ReactComponent  as Southeast } from '../../../assets/icons/svg/southeast.svg'
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,7 @@ import Socials from '../../../assets/icons/soclals';
 
 const Home = () => {
   const [selected, setSelected] = useState(0);
+  const sectb = useRef(null);
 
   useEffect(() => {
     setSelected(selected);
@@ -33,6 +34,12 @@ const Home = () => {
     navigate(to);
     console.log('clicked');
   }
+  
+  const handleExplore = () => {
+    sectb.current.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
 
   return (
   <motion.div 
@@ -42,21 +49,25 @@ const Home = () => {
   exit={{opacity: 0, y: -20, scale: .95}}
   className={styles.container}>
     <div  className={styles.secta}>
-      <div className={styles.heroContainer}>
+
+    <div className={styles.heroContainer}>
       <h1 className={styles.hero}>
           Journey to create timeless images
       </h1>
       <p>art of photography by Your Identity</p>
       </div>
+
       <div styles={styles.socialContainer}>
     <Socials displayIcons={true}
-                    containerProps={{gap: '10px'}}
-                    linkProps={{}}/>
+                    containerProps={{gap: '10px',paddingBlock: '.5em', height:'fit-content', }}
+                    linkProps={{ aspectRatio:  '1/1', height: '20px'}}/>
     </div>
-      <NavLink> Explore</NavLink>
+      <button onClick={handleExplore} className={styles. explore}> Explore</button>
+      
     </div>
 
     <motion.div
+        ref={sectb}
           className={styles.sectb}>
             <div className={styles.category}>
               <h5>Category</h5>

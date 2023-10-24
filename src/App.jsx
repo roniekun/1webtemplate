@@ -37,12 +37,14 @@ const App = () => {
 
   return (
     <div className={styles.container} > 
+  
+  <div className={styles.navigation}>
  <Navigation
  isMediumScreen={isMediumScreen}
  setToggleMenu={setToggleMenu}
  isSmallScreen={isSmallScreen}
   isToggleMenu={isToggleMenu}/>
-
+</div>
     <div className={styles.header}> 
          <Header isMediumScreen={isMediumScreen}
                         isToggleMenu={isToggleMenu}
