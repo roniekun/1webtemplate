@@ -1,5 +1,5 @@
 const links = [
-    { text: 'about', to: '/about'},
+    { text: 'Info', to: '/about'},
     {text: 'contact', to: '/contact'},
     {text: 'FAQ', to: '/frequently-asked-questions'}
 ];
