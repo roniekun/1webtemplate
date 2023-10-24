@@ -12,7 +12,7 @@
     min-height: 100vh;
     background-color: gainsboro;
     padding: 5%;
-    padding-block: 10%;
+    padding-block: 20%;
     position: relative;
     width: 100%;
     gap: 10px;
@@ -24,8 +24,18 @@
     flex-direction: column;
 
     .hero{
-        text-transform:  uppercase;
         font-family: 'Noto Serif Display', sans-serif;
+        color: gray;
+        font-size: 24px;
+        font-style: italic;
+
+        & span{
+            color: black;
+            font-size: 40px;
+            text-transform:  uppercase;
+            font-style: normal;
+
+        }
 
     }
 
@@ -36,7 +46,7 @@
 }
 
 .explore{
-    font-size: 12px;
+    font-size: 14px;
     padding: 1em;
     border: gray 1px solid;
     border-radius: 3px;

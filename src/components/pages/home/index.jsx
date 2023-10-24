@@ -52,9 +52,9 @@ const Home = () => {
 
     <div className={styles.heroContainer}>
       <h1 className={styles.hero}>
-          Journey to create timeless images
+          Journey to create <br /> <span images> timeless images</span> 
       </h1>
-      <p>art of photography by Your Identity</p>
+      <p> An art of photography by Your Identity</p>
       </div>
 
       <div styles={styles.socialContainer}>
