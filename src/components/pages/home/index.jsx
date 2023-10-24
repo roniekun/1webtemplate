@@ -34,7 +34,7 @@ const Home = () => {
     navigate(to);
     console.log('clicked');
   }
-  
+
   const handleExplore = () => {
     sectb.current.scrollIntoView({
       behavior: "smooth"
@@ -60,7 +60,8 @@ const Home = () => {
       <div styles={styles.socialContainer}>
     <Socials displayIcons={true}
                     containerProps={{gap: '10px',paddingBlock: '.5em', height:'fit-content', }}
-                    linkProps={{ aspectRatio:  '1/1', height: '20px'}}/>
+                    linkProps={{ aspectRatio:  '1/1', height: '20px', fill:'black'}}/>
+                    
     </div>
       <button onClick={handleExplore} className={styles. explore}> Explore</button>
       
