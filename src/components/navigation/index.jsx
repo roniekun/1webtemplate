@@ -51,7 +51,7 @@ useEffect(() => {
                                       gap: '10px',
                                        flexWrap: 'wrap',
                                       height: 'fit-content'}}
-      linkProps={{fontSize:  isSmallScreen ? '12px': '32px', 
+      linkProps={{fontSize:  isSmallScreen ? '12px': '18px', 
                             width: 'fit-content',
                             height: 'fit-content',
                             textTransform: 'uppercase',
