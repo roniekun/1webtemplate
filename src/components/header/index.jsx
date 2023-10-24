@@ -25,6 +25,8 @@ const Header = ({isMediumScreen, isToggleMenu, setToggleMenu,
       <div className={styles.navlinkContainer}>
         <Navlinks containerProps={{gap: '10px'}}
                           linkProps={{textTransform: 'capitalize',
+                                                fontSize: '24px',
+                                                fontWeight: '450',
                                                 color: color}}/>
          </div>
        }

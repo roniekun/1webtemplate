@@ -15,6 +15,7 @@
         position: relative;
         height: auto;
         gap: 5px;
+        font-size: 24px;
         overflow: hidden;
 
         .questionContainer{
@@ -27,7 +28,6 @@
             cursor: pointer;
             z-index: 4;
             border-radius: 3px;
-            font-size: 14px;
             width: 100%;
         }
         .questionContainer::after{
@@ -45,7 +45,6 @@
             position: relative;
             border-radius: 3px;
             align-self: center;
-            font-size: 14px;
             line-height: 1.5em;
             width: 100%;
             padding-inline: .5em;

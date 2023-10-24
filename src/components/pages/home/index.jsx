@@ -18,7 +18,6 @@ const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
     setBgColor(wtColor)
   }, [])
 
-
   useEffect(() => {
     setSelected(selected);
     const interval = setInterval(() => {
@@ -33,6 +32,13 @@ const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
   const handleClick = (index) => {
     setSelected(index);
   };
+  const handlePrevClick = ()=>{
+    setSelected((prev) => (prev === 0 ? data.length  - 1 : prev - 1) ) ;
+  }
+
+  const handleNextClick = ()=>{
+    setSelected((prev) => (prev ===  data.length-1  ? 0  : prev + 1) ) ;
+  }
 
   const navigate = useNavigate();
 
@@ -64,9 +70,9 @@ const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
       </div>
 
       <div styles={styles.socialContainer}>
-    <Socials displayIcons={true}
-                    containerProps={{gap: '10px',paddingBlock: '.5em', height:'fit-content', }}
-                    linkProps={{ aspectRatio:  '1/1', height: '20px', fill:'black'}}/>
+               <Socials displayIcons={true}
+                    containerProps={{gap: '15px',paddingBlock: '.5em', height:'fit-content', }}
+                    linkProps={{ aspectRatio:  '1/1', height: '20px', fill:'black', opacity: '.8'}}/>
                     
     </div>
       <button onClick={handleExplore} className={styles. explore}> Explore</button>
@@ -87,6 +93,7 @@ const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
         </div>
       </div>
       <div className={styles.gallery}>
+        <div className={styles.slidesContainer}>
           {data.map((image, index) => (
          <Slideshow 
          onClick={()=>handleImgClick(image.to)}
@@ -95,6 +102,13 @@ const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
            zIndex: index === selected ? 1 : -1}}
            image={image} key={index}/>
         ) )}
+        </div >
+
+              <div className={styles.arrowContainer}>
+          <span onClick={handlePrevClick}>Previous</span>
+          <span onClick={handleNextClick}>Next</span>
+        </div>
+
       </div>
     </motion.div>
     </motion.div>

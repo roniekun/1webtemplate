@@ -24,23 +24,22 @@
     flex-direction: column;
 
     .hero{
-        font-family: 'Noto Serif Display', sans-serif;
         color: gray;
-        font-size: 24px;
+        font-size: 32px;
         font-style: italic;
 
         & span{
             color: black;
-            font-size: 40px;
+            font-family: 'Noto Serif Display', sans-serif;
+            font-size: 48px;
             text-transform:  uppercase;
             font-style: normal;
 
         }
-
     }
 
     & p{
-        font-size: 16px;
+        font-size: 24px;
     }
 
 }
@@ -51,7 +50,7 @@
     border: gray 1px solid;
     border-radius: 3px;
     width: fit-content;
-    padding-inline:2.5em;
+    padding-inline:3.5em;
     text-decoration: none;
     }
 
@@ -76,7 +75,8 @@
         position: relative;
         width: 20vw;
         height: 90%;
-        padding-block: 1em;
+        gap: 10%;
+        padding-block: 5%;
         
 
         & h5{
@@ -99,6 +99,7 @@
             & li{
                     text-transform: uppercase;
                     padding: .5em;  
+                    font-size: 24px;
                     border-radius: 3px;         
                     cursor: pointer;
                     font-weight: 400;
@@ -135,11 +136,39 @@
     }
 }
     .gallery{
+        display: flex;
+        justify-content: center;
         position: relative;
         width: 65vw;
+        flex-direction: column;
         height: 80%;
         border-radius: 3px;
-        background-color: lightgray;
+
+        .slidesContainer{
+            position: relative;
+            background-color: lightgray;
+            height: 90%;
+        }
+        .arrowContainer{
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            align-items: center;
+            padding-inline: 5%;
+            display: flex;
+            height: 10%;
+            z-index: 99;
+
+            & span{
+                font-size: 16px;
+                cursor: pointer;
+                border: 1px solid gray;
+                padding-inline: 1em;
+                border-radius: 3px;
+                padding-block: .5em;
+                user-select: none;
+            }
+        }
 
     }
   

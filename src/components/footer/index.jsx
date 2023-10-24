@@ -14,7 +14,7 @@ const Footer = ({color, bgColor, setColor}) => {
         containerProps={{gap:'14px'}}
           linkProps={{color: color,
                                 textTransform: 'uppercase',
-                                fontSize: '12px'}}
+                                fontSize: '18px'}}
           displayNames={true}/>
       </div>
       <h5 className={styles.date}>&copy; {date.getFullYear()} All Rights Reserved </h5>

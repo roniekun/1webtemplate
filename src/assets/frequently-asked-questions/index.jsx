@@ -1,13 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import data from './data';
 import styles from './index.module.css';
-import { gsap } from 'gsap';
 import {ReactComponent as Active} from '../../../public/svg/active.svg';
 import {ReactComponent as Inactive} from '../../../public/svg/inactive.svg';
 import { motion, AnimatePresence } from 'framer-motion'
-import { document } from 'postcss';
 
-const FAQItems = () => {
+const FAQItems = ({linkProps, containerProps}) => {
 
   const [expandedIndex, setExpandedIndex] = useState(null);
   // const answerRefs = data.map(() => useRef(null));
