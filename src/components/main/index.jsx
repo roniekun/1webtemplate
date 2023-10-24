@@ -18,7 +18,8 @@ const Main = ({setColor,
                           bgColor}) => {
   const location = useLocation();
   return (
-    <div className={styles.container}>
+    <div
+     className={styles.container}>
       <AnimatePresence initial={false} mode='wait'>
       <Routes location={location} key={location.key}>     
               <Route exact path='/' element={<Home

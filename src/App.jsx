@@ -66,7 +66,10 @@ const App = ({bgColor,color,setColor,setBgColor ,setToggleMenu, isToggleMenu,wtC
                   wtColor={wtColor}/>
      </div>
     <div className={styles.footer}>
-      <Footer/>
+      <Footer color={color} 
+      bgColor={bgColor}
+      setColor={setColor}
+      />
       </div>
     </div>
 
