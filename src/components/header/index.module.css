@@ -37,11 +37,11 @@
     position: absolute;
     background-color: lightgray;
     bottom: 0;
+    mix-blend-mode: difference;
 }
 @media(max-width: 1024px){
     .container{
         height: 60px;
-        background-color: rgba(255, 255, 255, .7);
         backdrop-filter: blur(10px);
     }
 

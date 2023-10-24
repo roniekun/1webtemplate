@@ -12,16 +12,35 @@ import Birthday from '../pages/birthday'
 import Product from '../pages/product'
 import Family from '../pages/family'
 
-const Main = () => {
+const Main = ({setColor,
+                          color,
+                          setBgColor,
+                          bgColor}) => {
   const location = useLocation();
   return (
     <div className={styles.container}>
       <AnimatePresence initial={false} mode='wait'>
       <Routes location={location} key={location.key}>     
-              <Route exact path='/' element={<Home/>}/>
+              <Route exact path='/' element={<Home
+               setColor={setColor}
+               color={color}
+               setBgColor={setBgColor}
+               bgColor={bgColor}/>}/>
+
               <Route exact path='/about' element={<About/>}/>
-               <Route exact path='/frequently-asked-questions' element={<FAQ/>}/>
-              <Route exact path='/contact' element={<Contact/>}/>
+               <Route exact path='/frequently-asked-questions' element={<FAQ
+               setColor={setColor}
+               color={color}
+               setBgColor={setBgColor}
+               bgColor={bgColor}/>}/>
+
+              <Route exact path='/contact' 
+              element={<Contact
+              setColor={setColor}
+              color={color}
+              setBgColor={setBgColor}
+              bgColor={bgColor}/>}/>
+
               <Route exact path='/gallery-portraits' element={<Portrait/>}/>
               <Route exact path='/gallery-weddings' element={<Wedding/>}/>
               <Route exact path='/gallery-birthdays' element={<Birthday/>}/>

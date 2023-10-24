@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './index.module.css'
 import {motion} from 'framer-motion'
 
-const Contact = () => {
+const Contact = ({bgColor,setColor,color,setBgColor}) => {
+
+  useEffect(() => {
+    setColor('white');
+    setBgColor('black')
+  }, [])
+
   return (
     <motion.div 
     initial={{ y: 20, zIndex: 2 }}
@@ -10,7 +16,11 @@ const Contact = () => {
     transition={{duration: .3}}
     exit={{opacity: 0, y: -20, scale: .95}}
     className={styles.container}>
-      Contact
+      <div className={styles.secta}>
+        <h1>
+          get in touch
+        </h1>
+      </div>
       </motion.div>
   )
 }

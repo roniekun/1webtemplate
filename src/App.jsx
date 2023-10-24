@@ -6,10 +6,9 @@ import Footer from './components/footer'
 import Navigation from './components/navigation'
 import Lenis from '@studio-freight/lenis'
 
-const App = () => {
+const App = ({bgColor,color,setColor,setBgColor ,setToggleMenu, isToggleMenu}) => {
   const [isMediumScreen, setMediumScreen] = useState(window.innerWidth<=1024)
   const [isSmallScreen, setSmallScreen] = useState(window.innerWidth<=600)
-  const [isToggleMenu, setToggleMenu] = useState (false)
   const lenis = new Lenis()
 
   useEffect(() => {
@@ -36,7 +35,10 @@ const App = () => {
 
 
   return (
-    <div className={styles.container} > 
+ 
+    <div
+    style={{backgroundColor: bgColor}}
+     className={styles.container} > 
   
   <div className={styles.navigation}>
  <Navigation
@@ -48,15 +50,25 @@ const App = () => {
     <div className={styles.header}> 
          <Header isMediumScreen={isMediumScreen}
                         isToggleMenu={isToggleMenu}
-                        setToggleMenu={setToggleMenu}/>
-         </div>
+                        setToggleMenu={setToggleMenu}
+                        setColor={setColor}
+                        color={color}
+                        setBgColor={setBgColor}
+                        bgColor={bgColor}/>
+       </div>
       <div className={styles.main}> 
-     <Main/>
+     <Main setColor={setColor}
+                  color={color}
+                  setToggleMenu={setToggleMenu}
+                  isToggleMenu={isToggleMenu}
+                  setBgColor={setBgColor}
+                  bgColor={bgColor}/>
      </div>
     <div className={styles.footer}>
       <Footer/>
       </div>
     </div>
+
   )
 }
 

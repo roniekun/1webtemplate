@@ -4,10 +4,10 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
 
-    const [showNavbar, setShowNavbar] = useState(false);
     const [isLoading, setLoading] = useState(true);
     const [color, setColor] = useState("black");
-    const [bgColor, setBgColor] = useState("black");
+    const [isToggleMenu, setToggleMenu] = useState (false);
+    const [bgColor, setBgColor] = useState("white");
 
     setTimeout(() => {
       setLoading(false);
@@ -15,8 +15,8 @@ const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider 
-      value={{ showNavbar, setShowNavbar, isLoading, setLoading, color, setColor,
-              bgColor,setBgColor}}> 
+      value={{ isLoading, setLoading, color, setColor,
+              bgColor, setBgColor, setToggleMenu, isToggleMenu}}> 
       {children}
     </DataContext.Provider>
   );

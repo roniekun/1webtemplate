@@ -1,9 +1,15 @@
-import React from 'react'
+import { useEffect } from 'react'
 import FAQItems from '../../../assets/frequently-asked-questions'
 import styles from './index.module.css'
 import {motion} from 'framer-motion'
 
-const FAQ = () => {
+const FAQ = ({setColor,color,setBgColor,bgColor}) => {
+  
+  useEffect(() => {
+    setColor('white');
+    setBgColor('black')
+  }, [])
+
   return (
     <motion.div
     initial={{ y: 50, zIndex: 2 }}

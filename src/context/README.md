@@ -16,6 +16,11 @@ wrap all the child component with  this
      )}
     </ThemeContext.Consumer>
 
+
+
+
+    
+
 <alt>
 import React, { useContext } from 'react';
 

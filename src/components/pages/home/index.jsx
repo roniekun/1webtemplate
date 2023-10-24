@@ -9,9 +9,15 @@ import Slideshow from '../../../assets/slideshow-fade';
 import Socials from '../../../assets/icons/soclals';
 
 
-const Home = () => {
+const Home = ({setColor, color, setBgColor, bgColor}) => {
   const [selected, setSelected] = useState(0);
   const sectb = useRef(null);
+
+  useEffect(() => {
+    setColor('#181818');
+    setBgColor('transparent')
+  }, [])
+
 
   useEffect(() => {
     setSelected(selected);
