@@ -10,15 +10,53 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
-    .cta{
+    .sitemap{
         width: 100%;
-        align-self: flex-start;
-        line-height: 1.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        padding-block: .5em;
 
-        & h1{
-            font-size:12px;
+        & h4{
+            color: gray;
         }
     }
+    .sitemap::before{
+        content: '';
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        background-color: lightgray;
+        height: 1px;
+        mix-blend-mode: difference;
+
+    }
+
+    .socialContainer{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        gap:10px;
+        padding-block: .5em;
+
+        & h4{
+            color: gray;
+        }
+    }
+    .socialContainer::before{
+        content: '';
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        background-color: lightgray;
+        height: 1px;
+        mix-blend-mode: difference;
+    }
+    
     .date{
         font-size: 16px;
         margin: 0;

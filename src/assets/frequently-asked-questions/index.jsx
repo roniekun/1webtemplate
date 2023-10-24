@@ -64,7 +64,7 @@ const FAQItems = ({linkProps, containerProps}) => {
               <motion.div 
               ref={answers[index]}
               initial={{ opacity: 0}}
-              transition={{duration: .5}}
+              transition={{duration: .3}}
               animate={{ opacity: 1,  height: expandedIndex ===index ? '100%' : '0px'}}
               exit={{ opacity:0 , height: '0px'}}
               className={styles.answerContainer}>
