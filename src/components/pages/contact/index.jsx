@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import styles from './index.module.css'
 import {motion} from 'framer-motion'
 
-const Contact = ({bgColor,setColor,color,setBgColor}) => {
+const Contact = ({bgColor,setColor,color,setBgColor,btColor,wtColor}) => {
 
   useEffect(() => {
     setColor('white');
-    setBgColor('black')
+    setBgColor(btColor)
   }, [])
 
   return (

@@ -3,11 +3,11 @@ import FAQItems from '../../../assets/frequently-asked-questions'
 import styles from './index.module.css'
 import {motion} from 'framer-motion'
 
-const FAQ = ({setColor,color,setBgColor,bgColor}) => {
+const FAQ = ({setColor,color,setBgColor,bgColor,btColor,wtColor}) => {
   
   useEffect(() => {
     setColor('white');
-    setBgColor('black')
+    setBgColor(btColor);
   }, [])
 
   return (

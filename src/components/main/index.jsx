@@ -13,7 +13,7 @@ import Product from '../pages/product'
 import Family from '../pages/family'
 
 const Main = ({setColor,
-                          color,
+                          color,btColor,wtColor,
                           setBgColor,
                           bgColor}) => {
   const location = useLocation();
@@ -24,6 +24,8 @@ const Main = ({setColor,
               <Route exact path='/' element={<Home
                setColor={setColor}
                color={color}
+               wtColor={wtColor}
+               btColor={btColor}
                setBgColor={setBgColor}
                bgColor={bgColor}/>}/>
 
@@ -31,6 +33,8 @@ const Main = ({setColor,
                <Route exact path='/frequently-asked-questions' element={<FAQ
                setColor={setColor}
                color={color}
+               wtColor={wtColor}
+              btColor={btColor}
                setBgColor={setBgColor}
                bgColor={bgColor}/>}/>
 
@@ -38,6 +42,8 @@ const Main = ({setColor,
               element={<Contact
               setColor={setColor}
               color={color}
+              btColor={btColor}
+              wtColor={wtColor}
               setBgColor={setBgColor}
               bgColor={bgColor}/>}/>
 

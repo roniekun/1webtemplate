@@ -11,9 +11,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    < BrowserRouter>
    <DataProvider>
     <DataContext.Consumer>
-       {({color, bgColor, setColor, setBgColor, setToggleMenu, isToggleMenu}) =>( 
+       {({color, bgColor, setColor, setBgColor, setToggleMenu, isToggleMenu,btColor,wtColor}) =>( 
     <App color={color} bgColor={bgColor} setBgColor={setBgColor} 
-        setColor={setColor} setToggleMenu={setToggleMenu} isToggleMenu={isToggleMenu} />
+        setColor={setColor} setToggleMenu={setToggleMenu} isToggleMenu={isToggleMenu}
+        btColor={btColor} wtColor={wtColor} />
     )}
     </DataContext.Consumer>
     </DataProvider>
