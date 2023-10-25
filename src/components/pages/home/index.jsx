@@ -2,9 +2,7 @@ import styles from './index.module.css';
 import data from './data';
 import { useState, useEffect, useRef} from 'react';
 import {motion} from 'framer-motion'
-import {ReactComponent  as Southeast } from '../../../assets/icons/svg/southeast.svg'
 import { useNavigate } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import Slideshow from '../../../assets/slideshow-fade';
 import Socials from '../../../assets/icons/soclals';
 import { gsap } from "gsap";

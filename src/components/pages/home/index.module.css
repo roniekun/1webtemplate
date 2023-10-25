@@ -25,13 +25,13 @@
 
     .hero{
         color: gray;
-        font-size: 32px;
+        font-size: 28px;
         font-style: italic;
 
         & span{
             color: black;
             font-family: 'Noto Serif Display', sans-serif;
-            font-size: 48px;
+            font-size: 40px;
             text-transform:  uppercase;
             font-style: normal;
 
@@ -208,7 +208,7 @@
             & li{
                 width: fit-content;
                 font-size: 12px;
-                border: black 1px solid;
+                border: whitesmoke 1px solid;
             }
 
          }

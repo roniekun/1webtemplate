@@ -17,7 +17,8 @@ const FAQ = ({setColor,color,setBgColor,bgColor,btColor,wtColor}) => {
     transition={{duration: .3}}
     exit={{opacity: 0, y: -50, scale: .95}}
     className={styles.container}>
-      <h2>Frequently Asked Questions</h2>
+      <h2>Frequently Asked Questions</h2> 
+      <p>*for demo purpose*</p>
       <FAQItems/>
     </motion.div>
   )
