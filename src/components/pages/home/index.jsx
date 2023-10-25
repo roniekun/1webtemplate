@@ -63,7 +63,6 @@ useEffect(() => {
     trigger: sectb.current,
     start: "top top+=60px",
     end: "bottom bottom",
-    markers: true,
     onEnter: () =>{setBgColor(btColor)
     setColor('whitesmoke')} ,
     onLeaveBack: ()=> {setBgColor(wtColor) 
@@ -71,8 +70,6 @@ useEffect(() => {
   });
 
 }, [])
-
-
 
   return (
   <motion.div 

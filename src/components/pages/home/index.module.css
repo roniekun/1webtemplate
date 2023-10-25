@@ -46,7 +46,7 @@
 }
 
 .explore{
-    font-size: 14px;
+    font-size: 18px;
     padding: 1em;
     border: gray 1px solid;
     border-radius: 3px;
@@ -67,9 +67,9 @@
     position: relative;
     padding-block: 1em;
     gap: 50px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    background-color: black;
+    background-color: #181818;
     color: whitesmoke;
 
     .category{
@@ -77,11 +77,10 @@
         flex-direction: column;
         position: relative;
         width: 20vw;
-        height: 90%;
+        height: auto;
         gap: 10%;
-        padding-block: 5%;
+        margin-block: 5%;
         
-
         & h5{
             align-self: center;
             font-size: 24px;
@@ -140,17 +139,17 @@
 }
     .gallery{
         display: flex;
-        justify-content: center;
         position: relative;
         width: 65vw;
         flex-direction: column;
-        height: 80%;
         border-radius: 3px;
+        height: 800px;
+        justify-content: center;
 
         .slidesContainer{
             position: relative;
-            background-color: lightgray;
-            height: 90%;
+            height: 80%;
+            outline: auto lightgray;
         }
         .arrowContainer{
             justify-content: space-between;
@@ -178,11 +177,11 @@
 }
 
 @media(max-width: 1024px){
+
     .container{
     .sectb{
         flex-direction: column;
-        align-items: flex-start;
-        padding-block: .5em;
+        justify-content: flex-start;
         gap: 0;
 
          .category{
@@ -191,6 +190,7 @@
          justify-content: center;
          align-items: center;
          padding: .5em;
+         margin-block: 0;
 
          & h5{
          margin: 2vw;
@@ -219,7 +219,13 @@
             width: 97vw;
             align-self: center;
             height: auto;
-            aspect-ratio: 2/3;
+            gap: 10px;
+            
+            .slidesContainer{
+                aspect-ratio: 4/5;
+
+            }
+
         }
 
 }
