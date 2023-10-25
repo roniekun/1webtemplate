@@ -8,13 +8,13 @@ const Footer = ({color, bgColor, setColor}) => {
   const date = new Date();
   return (
     <div
-    style={{color: color, background: bgColor}}
+    style={{background: 'black'}}
      className={styles.container}>
         <div className={styles.sitemap}>
         <h4>Sitemap</h4>
         <Navlinks linkProps={{fontSize: '18px',
+                                                color: 'whitesmoke',
                                                 textTransform: 'uppercase',
-                                                color: color,
       }}
       containerProps={{ gap: '14px'
       }}
@@ -24,7 +24,7 @@ const Footer = ({color, bgColor, setColor}) => {
           <h4>Socials</h4>
         <Socials
         containerProps={{gap:'14px', flexWrap: 'wrap'}}
-          linkProps={{color: color,
+          linkProps={{ color: 'whitesmoke',
                                 textTransform: 'uppercase',
                                 fontSize: '18px'}}
           displayNames={true}/>
