@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Slideshow from '../../../assets/slideshow-fade';
 import Socials from '../../../assets/icons/soclals';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 
 const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
@@ -52,6 +55,25 @@ const Home = ({setColor, color, setBgColor, bgColor, wtColor,btColor}) => {
       behavior: "smooth"
     });
   }
+
+  // Animations
+useEffect(() => {
+
+  gsap.registerPlugin(ScrollTrigger) 
+
+  ScrollTrigger.create({
+    trigger: sectb.current,
+    start: "top+=95% bottom",
+    end: "bottom top",
+    onEnter: () =>{setBgColor(btColor)
+    setColor('whitesmoke')} ,
+    onLeaveBack: ()=> {setBgColor(wtColor) 
+    setColor('black')}
+  });
+
+}, [])
+
+
 
   return (
   <motion.div 

@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    padding: 5%;
     position: fixed;
     height: 100vh;
     top: 0;
@@ -19,6 +18,7 @@
         padding-block: 10%;
         align-items: center;
         height: 100%;
+        padding: 5%;
         overflow: hidden;
 
     & .linksContainer{
@@ -27,6 +27,7 @@
             position: relative;
             width: 100%;
             gap: 20px;
+            overflow: hidden;
 
     & .title{
         color: gray;
@@ -60,6 +61,8 @@
             width: 100%;
             align-self: flex-end;
             height: 15%;
+            overflow-y: hidden;
+            
         
         &   .title{
                 color: gray;

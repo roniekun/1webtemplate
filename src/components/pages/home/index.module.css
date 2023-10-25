@@ -68,6 +68,8 @@
     gap: 50px;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: whitesmoke;
 
     .category{
         display: flex;
