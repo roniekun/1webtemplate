@@ -61,8 +61,9 @@ useEffect(() => {
 
   ScrollTrigger.create({
     trigger: sectb.current,
-    start: "top+=95% bottom",
-    end: "bottom top",
+    start: "top top+=60px",
+    end: "bottom bottom",
+    markers: true,
     onEnter: () =>{setBgColor(btColor)
     setColor('whitesmoke')} ,
     onLeaveBack: ()=> {setBgColor(wtColor) 
