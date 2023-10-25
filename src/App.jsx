@@ -1,4 +1,4 @@
-import { useState,useEffect, } from 'react'
+import { useState,useEffect, useRef } from 'react'
 import styles from './app.module.css'
 import Header from './components/header'
 import Main from './components/main'
@@ -10,6 +10,10 @@ const App = ({bgColor,color,setColor,setBgColor ,setToggleMenu, isToggleMenu,wtC
   const [isMediumScreen, setMediumScreen] = useState(window.innerWidth<=1024)
   const [isSmallScreen, setSmallScreen] = useState(window.innerWidth<=600)
   const lenis = new Lenis()
+  const container = useRef(null)
+
+  const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
   
@@ -23,6 +27,8 @@ const App = ({bgColor,color,setColor,setBgColor ,setToggleMenu, isToggleMenu,wtC
   useEffect(() => {
 
     const handleResize = () => {
+      setHeight(window.innerHeight);
+      setWidth(window.innerWidth);
       setMediumScreen(window.innerWidth <= 1024);
       setSmallScreen(window.innerWidth <= 600);
       setToggleMenu(false);
@@ -33,12 +39,15 @@ const App = ({bgColor,color,setColor,setBgColor ,setToggleMenu, isToggleMenu,wtC
     };
   }, [isMediumScreen,isSmallScreen]);
 
+  console.log (height)
+  console.log (width)
 
   return (
  
     <div
+    ref={container}
+    style={{ width: `${width}px` }}
      className={styles.container} > 
-  
   <div className={styles.navigation}>
  <Navigation
  isMediumScreen={isMediumScreen}
